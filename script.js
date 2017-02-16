@@ -4,6 +4,7 @@
 
 $(document).ready(function(){
 	$("#image_click").click(function(){
+		event.preventDefault();
 		var client = new HttpClient();
 		client.get('https://www.random.org/integers/?num=3&min=0&max=127&col=1&base=10&format=plain&rnd=new', function(response) {
     	var j = JSON.stringify(response);
